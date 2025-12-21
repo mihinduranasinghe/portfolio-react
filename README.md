@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Mihindu Ranasinghe | Portfolio (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio rebuilt in React/TypeScript with Vite. Includes Work Experience, About, Achievements, Projects, Certifications, Social links, and live Recommendations powered by Firebase Realtime Database/Storage.
 
-Currently, two official plugins are available:
+## Prerequisites
+- Node.js 20.19+ (or 22.12+)
+- npm
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Setup
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create `.env.local` (kept out of git) with your Firebase config:
 ```
+VITE_FIREBASE_API_KEY=...
+VITE_FIREBASE_AUTH_DOMAIN=...
+VITE_FIREBASE_PROJECT_ID=...
+VITE_FIREBASE_STORAGE_BUCKET=...
+VITE_FIREBASE_MESSAGING_SENDER_ID=...
+VITE_FIREBASE_APP_ID=...
+VITE_FIREBASE_MEASUREMENT_ID=...
+```
+
+## Scripts
+- `npm run dev` — start Vite dev server
+- `npm run build` — production build to `dist`
+- `npm run preview` — preview the built site locally
+
+## Firebase
+- Config is loaded from `import.meta.env` (see `.env.local`).
+- Realtime Database path: `/recommendations` (reads and writes user submissions).
+- Storage: stores uploaded avatar images.
+Ensure you set appropriate Firebase security rules if the app is public.
+
+## GitHub Pages Deployment (Actions)
+- Workflow: `.github/workflows/deploy.yml` builds on `main` and publishes `dist` to `gh-pages`.
+- Set repo secrets with the same names as your env vars:
+  - `VITE_FIREBASE_API_KEY`
+  - `VITE_FIREBASE_AUTH_DOMAIN`
+  - `VITE_FIREBASE_PROJECT_ID`
+  - `VITE_FIREBASE_STORAGE_BUCKET`
+  - `VITE_FIREBASE_MESSAGING_SENDER_ID`
+  - `VITE_FIREBASE_APP_ID`
+  - `VITE_FIREBASE_MEASUREMENT_ID`
+- `BASE_PATH` is set in the workflow (default `/portfolio-react/`). Change it if your repo name differs.
+- After the first push to `main`, enable Pages in GitHub Settings → Pages → Source: `gh-pages` (root). Site URL: `https://<username>.github.io/<repo-name>/`.
+
+## Custom Domain (later)
+- When ready, add a `public/CNAME` file with your domain and configure DNS CNAME to `<username>.github.io`. Then enable HTTPS in GitHub Pages.
+
+## Notes
+- `.env.local` is ignored by git; keep secrets out of commits.
+- If you rotate Firebase keys, update both `.env.local` and GitHub Actions secrets.

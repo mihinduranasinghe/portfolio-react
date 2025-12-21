@@ -63,7 +63,7 @@ const Achievements = () => {
             </Col>
             <Col lg={6} className="py-5">
               <Card className="card-shadow shadow-lg rounded">
-                <Carousel interval={2800} ride="carousel" pause={false}>
+                <Carousel interval={2800} pause={false}>
                   {eiaQaImages.map((src) => (
                     <Carousel.Item key={src}>
                       <img className="d-block w-100 rounder" src={src} alt="EIA QA" />
@@ -96,7 +96,7 @@ const Achievements = () => {
           <Row>
             <Col lg={8} className="pt-5">
               <Card className="card-shadow shadow-lg rounded">
-                <Carousel interval={3200} ride="carousel" pause={false}>
+                <Carousel interval={3200} pause={false}>
                   {eiaImages.map((src) => (
                     <Carousel.Item key={src}>
                       <img className="d-block w-100 rounder" src={src} alt="Ericsson Innovation Awards" />
@@ -186,7 +186,7 @@ const Achievements = () => {
           <Row>
             <Col md={8}>
               <Card className="card-shadow shadow-lg rounded">
-                <Carousel interval={3000} ride="carousel" pause={false}>
+                <Carousel interval={3000} pause={false}>
                   {undpImages.map((src) => (
                     <Carousel.Item key={src}>
                       <img className="d-block w-100 rounder" src={src} alt="UNDP GENU" />
@@ -259,7 +259,7 @@ const Achievements = () => {
 
             <Col md={7} sm={12}>
               <Card className="card-shadow shadow-lg rounded">
-                <Carousel interval={3000} ride="carousel" pause={false}>
+                <Carousel interval={3000} pause={false}>
                   {nobelImages.map((src) => (
                     <Carousel.Item key={src}>
                       <img className="d-block w-100 rounder" src={src} alt="Nobel Round Table" />
@@ -312,7 +312,7 @@ const Achievements = () => {
 
             <Col md={7} sm={12}>
               <Card className="card-shadow shadow-lg rounded">
-                <Carousel interval={2800} ride="carousel" pause={false}>
+                <Carousel interval={2800} pause={false}>
                   {gdgImages.map((src) => (
                     <Carousel.Item key={src}>
                       <img className="d-block w-100 rounder" src={src} alt="GCP Panel Discussion" />
