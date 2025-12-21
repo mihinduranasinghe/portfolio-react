@@ -55,7 +55,7 @@ const Achievements = () => {
             <Col lg={6} className="py-5">
               <iframe
                 src="https://www.linkedin.com/video/embed/live/urn:li:ugcPost:6831154100575473664"
-                height="284"
+                height="354"
                 width="99%"
                 frameBorder="0"
                 allowFullScreen
@@ -116,7 +116,7 @@ const Achievements = () => {
                   <h6>If you have missed the live stream, you can watch it here.</h6>
                   <iframe
                     src="https://www.linkedin.com/video/embed/live/urn:li:ugcPost:6744595704343236608"
-                    height="284"
+                    height="384"
                     width="98%"
                     frameBorder="0"
                     allowFullScreen
