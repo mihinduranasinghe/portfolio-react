@@ -16,6 +16,10 @@ const App = () => {
     AOS.init({ duration: 700, once: true });
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
   return (
     <div className="page-content">
       <Header />
