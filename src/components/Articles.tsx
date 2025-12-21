@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Container, Card, Row, Col, Carousel, Button, Spinner } from 'react-bootstrap';
+import { asset } from '../utils/asset';
 
 type Article = {
   id: number;
@@ -68,7 +69,7 @@ const Articles = () => {
                           <Card className="shadow-sm bg-white rounded h-100">
                             <div style={{ height: 150, width: '100%' }} className="d-flex">
                               <img
-                                src={article.cover_image || '/assets/images/avatar.jpg'}
+                                src={article.cover_image || asset('assets/images/avatar.jpg')}
                                 alt={article.title}
                                 style={{ objectFit: 'cover', width: '100%' }}
                               />

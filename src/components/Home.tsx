@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { asset } from '../utils/asset';
 
 const Home = () => {
   const typedRef = useRef<HTMLSpanElement>(null);
@@ -20,11 +21,11 @@ const Home = () => {
     <section
       id="home"
       className="d-flex flex-column justify-content-center align-items-center text-center"
-      style={{ backgroundImage: 'url(/assets/images/bg_notebook.jpg)' }}
+      style={{ backgroundImage: `url(${asset('assets/images/bg_notebook.jpg')})` }}
     >
       <div className="hero-container" data-aos="fade-in">
         <div className="avatar-container">
-          <img src="/assets/images/avatar.jpg" className="avatar me-3" alt="Mihindu Ranasinghe" />
+          <img src={asset('assets/images/avatar.jpg')} className="avatar me-3" alt="Mihindu Ranasinghe" />
         </div>
         <h1 className="mt-3">Hello, I&apos;m Mihindu Ranasinghe</h1>
         <h5>

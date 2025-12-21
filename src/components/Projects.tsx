@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
+import { asset } from '../utils/asset';
 
 type Project = {
   title: string;
@@ -16,7 +17,7 @@ type ResearchProject = {
 
 const highlightProject = {
   title: 'Elzian Agro',
-  image: '/assets/images/elzian-agro/1.jpg',
+  image: asset('assets/images/elzian-agro/1.jpg'),
   description:
     'Award-winning machine learning and IoT-driven agricultural platform for early pest prediction. Elzian Agro combines real-time field sensors with external data feeds to monitor weather patterns, soil conditions, and pest/disease propagation. Advanced ML algorithms analyze this data to forecast potential outbreaks, enabling farmers to receive timely alerts and implement targeted preventive measures before crop damage occurs.',
   links: [{ href: 'http://agro.elzian.com/', label: 'agro.elzian.com' }],
@@ -54,7 +55,7 @@ const projectList: Project[] = [
     tech: 'Shell Script / Docker / GitHub Actions / Git / Linux tools / APIMCLI',
     description:
       'Ready-to-use CI/CD workflow for WSO2 API Cloud/Manager with no extra tooling installs; full client-managed pipeline.',
-    image: '/assets/images/projects/wso2.png',
+    image: asset('assets/images/projects/wso2.png'),
     links: [
       { href: 'https://github.com/marketplace/actions/wso2-apimcloud-cicd', label: 'Source Code' },
       { href: 'https://github.com/marketplace/actions/wso2-apimcloud-cicd', label: 'More Details' },
@@ -64,7 +65,7 @@ const projectList: Project[] = [
     title: 'Text Recognizer',
     tech: 'Kotlin / Node.js / Tesseract / Google Vision / MongoDB / Heroku',
     description: 'CamScanner-style OCR app with rich text utilities; backend services hosted on Heroku.',
-    image: '/assets/images/projects/textrecoginzertiny.jpg',
+    image: asset('assets/images/projects/textrecoginzertiny.jpg'),
     links: [
       { href: 'https://play.google.com/store/apps/details?id=com.mihinduranasinghe.cybercats.OCR', label: 'Source Code' },
       { href: 'https://play.google.com/store/apps/details?id=com.mihinduranasinghe.cybercats.OCR', label: 'More Details' },
@@ -74,7 +75,7 @@ const projectList: Project[] = [
     title: 'Leta OS',
     tech: 'Assembly Language / Data Structures / Hardware Structures',
     description: 'Simple operating system written in Assembly to display hardware information of the host computer.',
-    image: '/assets/images/projects/ostiny.png',
+    image: asset('assets/images/projects/ostiny.png'),
     links: [
       { href: 'https://github.com/mihinduranasinghe/LetaOS.ByMihinduRanasinghe', label: 'Source Code' },
       { href: 'https://dev.to/mihinduranasinghe/leta-os-by-mihindu-ranasinghe-1pco', label: 'More Details' },
@@ -84,7 +85,7 @@ const projectList: Project[] = [
     title: 'Team Master',
     tech: 'React / Node.js / Express / axios / Redux / MongoDB',
     description: 'All-in-one team and project management platform (Jira-like) under active development.',
-    image: '/assets/images/projects/TM.png',
+    image: asset('assets/images/projects/TM.png'),
     links: [
       { href: 'http://www.teammaster.xyz/', label: 'Web App' },
       { href: 'http://www.teammaster.xyz/', label: 'More Details' },
@@ -94,7 +95,7 @@ const projectList: Project[] = [
     title: 'Cyber Chats',
     tech: 'Android Studio / Java / Kotlin / Firebase',
     description: 'Multi-user chat application available on Google Play.',
-    image: '/assets/images/projects/cyberchatstiny.jpg',
+    image: asset('assets/images/projects/cyberchatstiny.jpg'),
     links: [
       { href: 'https://play.google.com/store/apps/details?id=com.mihinduranasinghe.cyberchats', label: 'Source Code' },
       { href: 'https://play.google.com/store/apps/details?id=com.mihinduranasinghe.cyberchats', label: 'More Details' },
@@ -105,7 +106,7 @@ const projectList: Project[] = [
     tech: 'JavaScript / Bootstrap / SAAS / WHO API / Arimac HPB API / Location APIs / axios',
     description:
       'National/international COVID-19 live stats with hospital-wise updates and an interactive heat map.',
-    image: '/assets/images/projects/covid19.png',
+    image: asset('assets/images/projects/covid19.png'),
     links: [
       { href: 'https://covid19lk.live/', label: 'Web App' },
       { href: 'https://covid19lk.live/', label: 'More Details' },

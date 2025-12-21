@@ -11,6 +11,7 @@ import {
   faLaptopHouse,
 } from '@fortawesome/free-solid-svg-icons';
 import SocialLinks from './SocialLinks';
+import { asset } from '../utils/asset';
 
 const calculateAge = (dob: Date) => {
   const today = new Date();
@@ -124,16 +125,14 @@ const About = () => {
 
           <Col lg={4} data-aos="fade-zoom" className="about-media">
             <Carousel interval={4000} fade className="mb-3">
-              {['/assets/images/tvm.jpeg', '/assets/images/wso2.jpg'].map(
-                (src) => (
-                  <Carousel.Item key={src}>
-                    <img className="d-block w-100 rounder about-media-img" src={src} alt="Mihindu career" />
-                  </Carousel.Item>
-                )
-              )}
+              {[asset('assets/images/tvm.jpeg'), asset('assets/images/wso2.jpg')].map((src) => (
+                <Carousel.Item key={src}>
+                  <img className="d-block w-100 rounder about-media-img" src={src} alt="Mihindu career" />
+                </Carousel.Item>
+              ))}
             </Carousel>
             <picture>
-              <img src="/assets/images/syscocertificate.jpeg" alt="Sysco certificate" className="img-fluid about-media-img" />
+              <img src={asset('assets/images/syscocertificate.jpeg')} alt="Sysco certificate" className="img-fluid about-media-img" />
             </picture>
           </Col>
         </Row>

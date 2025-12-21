@@ -12,6 +12,7 @@ import {
 } from 'firebase/database';
 import { ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../firebase';
+import { asset } from '../utils/asset';
 
 type Recommendation = {
   id?: string;
@@ -42,7 +43,7 @@ const staticRecommendation: Recommendation = {
   organization: 'SquareHub | DirectPay | Pay Media',
   recommendation:
     'I had the opportunity to work with Mihindu as a mentor during the Generation Unlimited (GenU) Youth Challenge organized by UNDP. Mihindu and his team underwent a 3-month startup incubation support with SquareHub as a part of the GenU programme. During the incubation, Mihindu showcased great potential as a young innovator. His commitment and resilience will take him a long way in his professional career.',
-  avatar: '/assets/images/recommendations/maria2.jpg',
+  avatar: asset('assets/images/recommendations/maria2.jpg'),
 };
 
 const References = () => {

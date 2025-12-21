@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { asset } from '../utils/asset';
 
-const eiaQaImages = ['/assets/images/ericsson/EIAQA1.jpg', '/assets/images/ericsson/EIAQA2.jpg'];
+const eiaQaImages = ['/assets/images/ericsson/EIAQA1.jpg', '/assets/images/ericsson/EIAQA2.jpg'].map(asset);
 
 const eiaImages = [
   '/assets/images/ericsson/EIA_UOK_1.jpg',
@@ -10,7 +11,7 @@ const eiaImages = [
   '/assets/images/ericsson/EIAfinal4.jpg',
   '/assets/images/ericsson/EIAfinal5.jpg',
   '/assets/images/ericsson/EIA_UOK_4.jpg',
-];
+].map(asset);
 
 const undpImages = [
   '/assets/images/undp/9.jpg',
@@ -19,7 +20,7 @@ const undpImages = [
   '/assets/images/undp/undp_1.jpg',
   '/assets/images/undp/1.jpg',
   '/assets/images/undp/undp_2.jpg',
-];
+].map(asset);
 
 const nobelImages = [
   '/assets/images/nobel-roundtable/3.png',
@@ -29,9 +30,9 @@ const nobelImages = [
   '/assets/images/nobel-roundtable/9.png',
   '/assets/images/nobel-roundtable/10.png',
   '/assets/images/nobel-roundtable/11.png',
-];
+].map(asset);
 
-const gdgImages = ['/assets/images/gdg/1.jpg', '/assets/images/gdg/3.jpg'];
+const gdgImages = ['/assets/images/gdg/1.jpg', '/assets/images/gdg/3.jpg'].map(asset);
 
 const Achievements = () => {
   return (

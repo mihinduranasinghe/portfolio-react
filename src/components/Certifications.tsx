@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { asset } from '../utils/asset';
 
 type Certification = {
   title: string;
@@ -40,21 +41,21 @@ const certifications: Certification[] = [
     provider: 'WSO2',
     status: 'Completed',
     link: 'https://certification.wso2.com/web/certificate/DYG8YD',
-    image: '/assets/images/certificates/CertificateAPIMCroped.png',
+    image: asset('assets/images/certificates/CertificateAPIMCroped.png'),
   },
   {
     title: 'Certified WSO2 Identity Server Developer',
     provider: 'WSO2',
     status: 'Completed',
     link: 'https://certification.wso2.com/web/certificate/DYG8YD',
-    image: '/assets/images/certificates/CertificateIAMCroped.png',
+    image: asset('assets/images/certificates/CertificateIAMCroped.png'),
   },
   {
     title: 'Certified WSO2 Enterprise Integrator Developer - Streaming Integrator',
     provider: 'WSO2',
     status: 'Completed',
     link: 'https://certification.wso2.com/web/certificate/DYG8YD',
-    image: '/assets/images/certificates/CertificateIAMCroped.png',
+    image: asset('assets/images/certificates/CertificateIAMCroped.png'),
   },
 ];
 
