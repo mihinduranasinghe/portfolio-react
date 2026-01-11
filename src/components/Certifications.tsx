@@ -37,6 +37,12 @@ const certifications: Certification[] = [
     embedBadgeId: '5717863a-8e3d-4c34-96f5-c3b322004694',
   },
   {
+    title: 'AWS Certified ML Engineer – Associate',
+    provider: 'AWS',
+    status: 'Completed',
+    embedBadgeId: '20266bbe-f79f-4afc-b3ca-ad003d0e05ba',
+  },
+  {
     title: 'Certified WSO2 API Manager Developer',
     provider: 'WSO2',
     status: 'Completed',
